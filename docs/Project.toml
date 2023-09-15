@@ -1,0 +1,7 @@
+# Don't forget to run
+#
+#     pkg> dev ..
+#
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+COPIERTemplateExample = "d7deeeea-80e8-4f78-bbba-6981ece9d3d5"
