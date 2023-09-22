@@ -10,5 +10,5 @@ PackageOwner: abelsiqueira
 PackageUUID: d7deeeea-80e8-4f78-bbba-6981ece9d3d5
 RunJuliaNightlyOnCI: true
 UseCirrusCI: false
-_commit: v0.1.0
+_commit: v0.1.5
 _src_path: https://github.com/abelsiqueira/COPIERTemplate.jl

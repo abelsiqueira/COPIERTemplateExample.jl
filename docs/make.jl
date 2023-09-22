@@ -1,13 +1,17 @@
 using COPIERTemplateExample
 using Documenter
 
-DocMeta.setdocmeta!(COPIERTemplateExample, :DocTestSetup, :(using COPIERTemplateExample); recursive = true)
+DocMeta.setdocmeta!(
+  COPIERTemplateExample,
+  :DocTestSetup,
+  :(using COPIERTemplateExample);
+  recursive = true,
+)
 
 makedocs(;
   modules = [COPIERTemplateExample],
   doctest = true,
-  linkcheck = false,
-  strict = false,
+  linkcheck = true,
   authors = "Abel Soares Siqueira <abel.s.siqueira@gmail.com> and contributors",
   repo = "https://github.com/abelsiqueira/COPIERTemplateExample.jl/blob/{commit}{path}#{line}",
   sitename = "COPIERTemplateExample.jl",
