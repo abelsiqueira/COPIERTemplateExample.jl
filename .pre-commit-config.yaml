@@ -1,4 +1,12 @@
 repos:
+  - repo: local
+    hooks:
+      # Prevent committing .rej files
+      - id: forbidden-files
+        name: forbidden files
+        entry: found Copier update rejection files; review them and remove them
+        language: fail
+        files: "\\.rej$"
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
@@ -15,10 +23,12 @@ repos:
       - id: pretty-format-json
         args: [--autofix, --indent=2]
       - id: trailing-whitespace
+      - id: check-merge-conflict
+        args: [--assume-in-merge]
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.36.0
+    rev: v0.37.0
     hooks:
-      - id: markdownlint
+      - id: markdownlint-fix
   - repo: https://github.com/citation-file-format/cffconvert
     rev: 054bda51dbe278b3e86f27c890e3f3ac877d616c
     hooks:
@@ -41,3 +51,5 @@ repos:
     rev: v3.11.2
     hooks:
       - id: markdown-link-check
+        args:
+          - --config=.markdown-link-config.json
